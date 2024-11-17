@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Web Responsiva</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bienvenido a mi página web</h1>
+  </header>
+  
+  <section class="contenido">
+    <p>Esta es una página simple, accesible desde dispositivos móviles y de escritorio.</p>
+    <button onclick="mostrarMensaje()">Haz clic aquí</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mi página web</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.contenido {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+  .contenido {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+
+/* Estilos para pantallas grandes (escritorio) */
+@media (min-width: 601px) {
+  .contenido {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+}
+function mostrarMensaje() {
+  alert('¡Hola! Gracias por visitar mi página.');
+}
